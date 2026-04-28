@@ -78,28 +78,49 @@ H2 Database (In-Memory)
 
 ---
 
-## 📁 Project Structure
 
+---
 
+## 🏗️ Architecture Diagram
 
-odr-platform/
-│
-├── frontend/
-│ ├── src/
-│ │ ├── App.jsx
-│ │ ├── api.js
-│ │ ├── style.css
-│ │ └── main.jsx
-│ └── package.json
-│
-├── backend/
-│ ├── src/
-│ │ └── main/
-│ │ ├── java/com/odr/platform/
-│ │ └── resources/
-│ └── pom.xml
-│
-└── README.md
+```mermaid
+flowchart TD
+
+A[User / Admin Browser] --> B[React Frontend (Vite)]
+B -->|HTTP Requests| C[Spring Boot Backend]
+
+C --> D[Dispute APIs]
+C --> E[Auth APIs]
+C --> F[File Upload APIs]
+
+D --> G[H2 Database]
+E --> G
+F --> G
+
+subgraph Frontend Features
+    B1[Dashboard]
+    B2[File Dispute]
+    B3[Messaging (LocalStorage)]
+    B4[Calendar (LocalStorage)]
+    B5[Search + Notifications]
+end
+
+B --> B1
+B --> B2
+B --> B3
+B --> B4
+B --> B5
+
+subgraph Backend Modules
+    C1[Controllers]
+    C2[Services]
+    C3[Repositories]
+end
+
+C --> C1
+C1 --> C2
+C2 --> C3
+C3 --> G
 ---
 
 ## ▶️ Run Locally
