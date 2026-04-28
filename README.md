@@ -86,8 +86,8 @@ H2 Database (In-Memory)
 ```mermaid
 flowchart TD
 
-A[User / Admin Browser] --> B[React Frontend]
-B -->|HTTP Requests| C[Spring Boot Backend]
+A[User Admin Browser] --> B[React Frontend]
+B --> C[Spring Boot Backend]
 
 C --> D[Dispute APIs]
 C --> E[Auth APIs]
@@ -98,11 +98,11 @@ E --> G
 F --> G
 
 subgraph Frontend
-    B1[Dashboard]
-    B2[File Dispute]
-    B3[Messaging LocalStorage]
-    B4[Calendar LocalStorage]
-    B5[Search Notifications]
+B1[Dashboard]
+B2[File Dispute]
+B3[Messaging LocalStorage]
+B4[Calendar LocalStorage]
+B5[Search Notifications]
 end
 
 B --> B1
@@ -112,20 +112,20 @@ B --> B4
 B --> B5
 
 subgraph Backend
-    C1[Controllers]
-    C2[Services]
-    C3[Repositories]
+C1[Controllers]
+C2[Services]
+C3[Repositories]
 end
 
 C --> C1
 C1 --> C2
 C2 --> C3
 C3 --> G
+```
 
 ---
 
 ## ▶️ Run Locally
-
 ### 🔹 1. Backend
 
 ```bash
