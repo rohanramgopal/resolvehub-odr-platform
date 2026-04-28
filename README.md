@@ -93,16 +93,16 @@ C --> D[Dispute APIs]
 C --> E[Auth APIs]
 C --> F[File Upload APIs]
 
-D --> G[H2 Database]
+D --> G[(H2 Database)]
 E --> G
 F --> G
 
-subgraph Frontend Features
+subgraph Frontend_Features
     B1[Dashboard]
     B2[File Dispute]
-    B3[Messaging (LocalStorage)]
-    B4[Calendar (LocalStorage)]
-    B5[Search + Notifications]
+    B3[Messaging - LocalStorage]
+    B4[Calendar - LocalStorage]
+    B5[Search & Notifications]
 end
 
 B --> B1
@@ -111,7 +111,7 @@ B --> B3
 B --> B4
 B --> B5
 
-subgraph Backend Modules
+subgraph Backend_Modules
     C1[Controllers]
     C2[Services]
     C3[Repositories]
