@@ -81,6 +81,7 @@ H2 Database (In-Memory)
 ## 📁 Project Structure
 
 
+
 odr-platform/
 │
 ├── frontend/
@@ -92,13 +93,13 @@ odr-platform/
 │ └── package.json
 │
 ├── backend/
-│ ├── src/main/java/com/odr/platform/
-│ ├── src/main/resources/
+│ ├── src/
+│ │ └── main/
+│ │ ├── java/com/odr/platform/
+│ │ └── resources/
 │ └── pom.xml
 │
 └── README.md
-
-
 ---
 
 ## ▶️ Run Locally
